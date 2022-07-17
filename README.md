@@ -6,12 +6,17 @@
 Благодаря этому проекту люди смогут делиться моментами из жизни.
 ### Технологии
 Python 3.10.4
+Django 2.2.19
 ### Запуск проекта в dev-режиме
 - Установите и активируйте виртуальное окружение
 - Установите зависимости из файла requirements.txt
-```pip install -r requirements.txt``` 
+```
+pip install -r requirements.txt
+``` 
 - В папке с файлом manage.py выполните команду:
-```python3 manage.py runserver```
+```
+python3 manage.py runserver
+```
 ### Авторы
 Григорий Махалов
 _Это будет курсив_
