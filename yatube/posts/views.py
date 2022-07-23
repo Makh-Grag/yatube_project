@@ -1,6 +1,7 @@
-from django.http import HttpResponse
+from multiprocessing import context
 from django.shortcuts import render
-from .models import Post
+from .models import Post, Group
+from django.shortcuts import get_object_or_404 
 
 #Главная страница
 def index(request):   
@@ -14,12 +15,11 @@ def index(request):
     }
     return render(request, 'posts/index.html', context) 
 
-def group_posts(request):
-    template = 'posts/group_list.html'
-    title = "YaTube"
-    text = "Здесь будет информация о группах проекта Yatube"
+def group_posts(request, slug):
+    group = get_object_or_404(Group, slug=slug)
+    posts = Post.ojects.filter(group=group).order_by('-pub_date')[:10]
     context = {
-        'title' : title,
-        'text': text
+        'group' : group,
+        'posts' : posts,
     }
-    return render(request, template, context)
+    return render(request, 'posts/group_list.html', context)
