@@ -6,16 +6,15 @@
       <nav class="navbar navbar-light" style="background-color: lightskyblue">
         <div class="container">
           <a class="navbar-brand" href="index.html">
+            <img src="{% static 'img/logo.png' %}">
             <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
             <!-- тег span используется для добавления нужных стилей отдельным участкам текста -->
             <span style="color:red">Ya</span>tube</a>
             <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> 
-            <img src="{% static 'img/logo.png' %}">
           </a>
         </div>
       </nav>
     </head>
       <a class="navbar-brand" href="{% url 'posts:index' %}">
-       Вот как-то так, и никак иначе,
-       слезы по щекам, ты че, дура, плачешь?
+       
       </a>

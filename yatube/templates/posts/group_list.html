@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>    
+  <head>   
     {% load static %}
     <meta charset="utf-8"> <!-- Кодировка сайта -->
     <!-- Сайт готов работать с мобильными устройствами -->
@@ -45,10 +45,11 @@
     <!-- text-center: выравнивает текстовые блоки внутри блока по центру -->
     <!-- py-3: контент внутри размещается с отступом сверху и снизу -->         
     <footer class="border-top text-center py-3">
-      <!-- тег span используется для добавления нужных стилей отдельным участкам текста --> 
+      {% include 'includes/footer.html' %} 
+      <!-- тег span используется для добавления нужных стилей отдельным участкам текста -->
       <p>
         © 2020 Copyright <span style="color:red">Ya</span>tube
-      </p> 
+      </p>  
     </footer>
   </body>
 </html>
